@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+}
+.callout{
+    background-color: lightblue;
+    color:cadetblue;
+    line-height:1.4rem;
+    width:300px;
+    padding: 20px;;
+}
+
+.toggle{
+color:brown;
+}

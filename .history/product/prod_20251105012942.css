@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: wheat;
+}
+.contain{
+ background-color: whitesmoke;
+    width: 800px;
+    height: 600px;
+    border: 2px solid black;
+    display: flex;;
+    justify-content: center;
+
+
+}

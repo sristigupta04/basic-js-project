@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+}
+.callout{
+    background-color: lightblue;
+    color:cadetblue;
+    line-height:1.4rem;
+    width:300px;
+    padding: 20px;;
+}
+
+.toggle{
+color:brown;
+}
+.toggle_element{
+width:10px;
+height: 40px;
+background-color: cadetblue;
+} 
+
+.awesome{
+    text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  border: 5px solid;
+  padding: 2rem;
+  width: 320px;
+}
+
+awesome[data-sizing="intrinsic"] {
+  width: min-content;
+}
+
+/*
+
+
+Presentational styles 
+*/
+.awesome {
+  --flow-space: 2rem;
+}
+
+blockquote, blockquote::before, blockquote::after {
+  color: navy;
+  & {
+    border: 1px solid navy;
+  }
+}
+
+/* presentational styles */
+
+blockquote {
+  border-radius: 1em;
+  padding:  1em 3.25em;
+  position: relative;
+}
+
+blockquote::before {
+  content: open-quote;
+  inset-block-start: 0;
+   inset-inline-start: 0;
+}
+
+blockquote::after {
+  content: close-quote;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+} 
+
+blockquote::before,
+blockquote::after {
+  display: block;
+  inline-size: 1em;
+  block-size: 1em;
+  font-size: 3em;
+  border-radius: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+body {
+  display: grid;
+  margin-inline: 3em;
+  place-content: safe center;
+  font-size: 1.25em;
+}

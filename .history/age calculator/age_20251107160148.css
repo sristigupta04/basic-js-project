@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsla(207, 88%, 23%, 1);
+
+background: linear-gradient(90deg, hsla(207, 88%, 23%, 1) 0%, hsla(69, 78%, 32%, 1) 50%, hsla(58, 100%, 52%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(207, 88%, 23%, 1) 0%, hsla(69, 78%, 32%, 1) 50%, hsla(58, 100%, 52%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(207, 88%, 23%, 1) 0%, hsla(69, 78%, 32%, 1) 50%, hsla(58, 100%, 52%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#074170", endColorstr="#7E9012", GradientType=1 );
+}
+
+.main{
+     display: flex;
+    justify-content: center;
+    align-items: center;  
+    border:2px solid white;
+    height: 400px;
+    width: 600px;
+    box-shadow: 2px 2px 8px white;
+    font-size: 20px;
+     margin-top: 200px;
+     background-color:#011F5B;
+
+}
+
+.age{
+    background-color:#003262;
+     box-shadow: 2px 2px 8px white;
+    border:2px solid white;
+    height:300px;
+    width:400px;
+}
+
+.age h1{
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 15px;
+    color:whitesmoke;
+    font-size: 200;
+    
+}
+
+.age  label{
+    color:white;
+ display: flex;
+ justify-content: center;
+ font-size: 30px;
+ margin:20px;
+   
+}
+.age input{
+     display: flex;
+     justify-content: center; 
+     height: 30px;
+     width: 200px;
+    margin-left: 100px;
+    border-radius: 10px;
+}
+.age button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 30px;
+     width: 200px;
+     margin: 2rem;;
+      margin-left: 100px;
+    border-radius: 10px;
+}
+
+
+#realage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 30px;
+     width: 200px;
+     margin: 2rem;;
+      margin-left: 100px;
+    border-radius: 10px;
+    color:white;
+}

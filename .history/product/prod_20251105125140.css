@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered container */
+.contain {
+  width: 800px;
+  height: 600px;
+  background-color: #f7f7f7;
+  border: 2px solid white;
+  box-shadow: 2px 2px 10px black;
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+/* Navigation bar */
+
+
+/* Main content area */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

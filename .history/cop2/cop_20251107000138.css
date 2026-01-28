@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color:white;
+}
+
+.container{
+border: 3px solid whitesmoke;
+color:white;
+background-color:#AA98A9;;
+
+height: 500px;
+width: 500px;
+;
+}

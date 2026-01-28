@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.contain{
+    background-color: black;
+     color: whitesmoke;
+    justify-content: center;
+    flex:1;
+    flex-direction: wrap;
+}
+
+.toast{
+    border:6px solid green;
+
+    
+}
+
+ .toast h1{
+    justify-content: center;
+    align-items: center;
+}
+.toast img{
+    width:600px;
+    height: 400px;;
+    border-radius:30px;
+    box-shadow: 2px 2px 15px white;
+     
+}

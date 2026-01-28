@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: #7b22c3;
+background: radial-gradient(circle, rgba(123, 34, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+.main{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    border:2px solid white;
+    height: 400px;
+    width: 600px;
+    box-shadow: 2px 2px 8px white;
+    font-size: 20px;;
+     margin: 30px;;
+}

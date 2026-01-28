@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    background-size: cover;
+    width: 50px; 
+}
+h1{
+    font: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkred;
+}
+span{
+font: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: darkred;
+}
+
+.navi{
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.work a{
+    text-decoration: none;
+    color: white;
+    gap:10px;
+
+}
+.main{
+    background-image: url("https://png.pngtree.com/png-clipart/20190313/ourmid/pngtree-planar-cartoon-street-view-shop-restaurant-and-vendor-elements-png-image_848867.jpg");
+    margin-top: 2rem;
+
+    border:2px solid black;
+    width:100%;
+    height: 500px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.prot{
+    width: 250px;   /* <-- yaha width decide karti hai kitne word aayenge */
+    text-align: left;
+    padding: 10px;
+}
+
+.prot p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+button{
+    height: 20px;
+    width: 80px;
+    color:green;
+    background-color:coral;
+    border-radius: 10px;
+    border: none;
+}
+.one{
+    margin-top: 1rem;;
+    background-image: url("https://t4.ftcdn.net/jpg/01/81/11/75/360_F_181117517_A5hGpIxILAyUfLBqRYqNNFBPJyo066F6.jpg");
+    background-size:cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;;
+    height: 200px;
+    width: 400px;
+    border-radius: 13px;;
+    box-shadow: 2px 2px 8px black;
+
+};
+.one:hover, .two:hover{
+    box-shadow: 2px 2px 12px green;
+    transform: scale(1.05);   /* Correct - scale takes numbers, not fr units */
+    transition: 0.3s;
+}
+.one .two span{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+
+    background: rgba(0,0,0,0.4);
+    padding: 2px 6px;
+    border-radius: 4px;
+    
+}
+.two{
+    margin-top: 1rem;
+    background-image: url("https://t4.ftcdn.net/jpg/01/81/11/75/360_F_181117517_A5hGpIxILAyUfLBqRYqNNFBPJyo066F6.jpg");
+    background-size:cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;;
+    height: 200px;
+    width: 400px;
+    border-radius: 13px;;
+    box-shadow: 2px 2px 8px black;
+
+}
+
+.file{
+    gap: 40px;;
+    width: 900px;
+    height:230px;
+    border:none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}

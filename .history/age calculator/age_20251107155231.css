@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: #7b22c3;
+background: radial-gradient(circle, rgba(123, 34, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+.main{
+     display: flex;
+    justify-content: center;
+    align-items: center;  
+    border:2px solid white;
+    height: 400px;
+    width: 600px;
+    box-shadow: 2px 2px 8px white;
+    font-size: 20px;
+     margin-top: 200px;
+     background-color:#011F5B;
+
+}
+
+.age{
+    background-color:#003262;
+     box-shadow: 2px 2px 8px white;
+    border:2px solid white;
+    height:300px;
+    width:400px;
+}
+
+.age h1{
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 15px;
+    color:whitesmoke;
+    font-size: 200;
+    
+}
+
+.age  label{
+    color:white;
+
+}

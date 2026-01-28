@@ -1,0 +1,7 @@
+.ele{
+height: 100vh;
+width:100%;
+}
+.ele img{
+    background-size: cover;
+}

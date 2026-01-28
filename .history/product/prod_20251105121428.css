@@ -1,0 +1,18 @@
+*{
+   
+    background-color: wheat;
+    height: 100vh;
+}
+.main{
+  padding-left:400px;
+}
+.contain{
+  width: 400px;
+    height: 600px;
+    border: 2px solid white;
+    display: flex;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+  color:white;
+}

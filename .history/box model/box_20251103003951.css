@@ -1,0 +1,8 @@
+*{
+    padding: 0;
+}
+.callout{
+    background-color: lightblue;
+    color:cadetblue;
+    line-height:1rem;
+}

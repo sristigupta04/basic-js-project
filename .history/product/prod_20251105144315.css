@@ -1,0 +1,43 @@
+img {
+  height: 100px;
+  border-radius: 15px;
+}
+
+/* Center everything inside the .main box */
+.main {
+  border: 2px solid black;
+  height: 200px;
+  width: 300px;
+display: inline-flexbox;               /* enables flexbox */
+  align-items: center;         /* centers vertically */
+  justify-content: center;     /* centers horizontally */
+  background-color: white; 
+  padding: 20px;
+  margin: 1em;    /* optional, just for clarity */
+}
+
+.bio{
+  height: 200px;
+  box-shadow: 2px 2px 8px black;
+  border: 2px solid white;
+  width:300px;
+  padding: 20px;
+  margin: 1em;;
+
+}
+.foot{
+   height: 40px;
+  box-shadow: 2px 2px 8px black;
+  border: 2px solid white;
+  width:300px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 1em;;
+}
+body{
+  border: 2px solid black;
+  width:400px;;
+align-items: center;
+justify-content: center;
+}

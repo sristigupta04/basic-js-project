@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Overall container holds everything */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbars */
+.navbar {
+  background-color: yellow;
+  padding: 15px;
+  text-align: center;
+}
+.navbar img{
+  background-position: cover;
+}
+]
+.navbar-second {
+  background-color: red;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Main area (Sidebar + Content) */
+.main-area {
+  flex: 1;
+  display: flex;
+}
+
+/* Sidebar on left */
+.Sidebar {
+  background-color: brown;
+  width: 250px;
+  padding: 20px;
+}
+
+/* Content on right */
+.Content {
+  flex: 1;
+  background-color: coral;
+  padding: 20px;
+}
+
+/* Footer at bottom */
+.Footer {
+  background-color: green;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

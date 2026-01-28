@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.contain{
+    background-color:black;
+     color: whitesmoke;
+    justify-content: center;
+    flex:1;
+    flex-direction: wrap;
+}
+.toast{
+    border:6px solid lightslategray;
+   width:700px;
+   height: auto;
+   padding-left: 40px;;
+   justify-content: center;
+    align-items: center;
+     border-radius:50px;
+}
+
+ .toast h2{
+    justify-content: center;
+    align-items: center;
+    color:crimson;
+}
+.toast img{
+    width:600px;
+    height: 400px;;
+    border-radius:30px;
+    box-shadow: 2px 2px 15px white;
+     
+}

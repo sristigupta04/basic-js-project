@@ -1,0 +1,71 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center everything in the body */
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;       /* stack sections vertically */
+  justify-content: center;      /* vertical center */
+  align-items: center;          /* horizontal center */
+  background-color: #f5f5f5;
+}
+
+/* Profile section */
+.main {
+  border: 2px solid black;
+  height: 200px;
+  width: 300px;
+  display: flex;                /* correct flex syntax */
+  flex-direction: column;       /* stack image, h2, p vertically */
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  margin: 1em;
+  border-radius: 10px;
+}
+
+img {
+  height: 100px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+/* Bio section */
+.bio {
+  height: 200px;
+  width: 300px;
+  box-shadow: 2px 2px 8px black;
+  border: 2px solid white;
+  background-color: white;
+  padding: 20px;
+  margin: 1em;
+  border-radius: 10px;
+}
+
+/* Footer */
+.foot {
+  height: 40px;
+  width: 300px;
+  box-shadow: 2px 2px 8px black;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  margin: 1em;
+  border-radius: 10px;
+}
+
+
+.foot .bio .main :hover{
+   box-shadow: 2px 2px 8px gray;
+   transform: scale(1.4fr);
+}

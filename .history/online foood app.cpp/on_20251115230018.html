@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Online FoodShop - demo</title>
+<style>
+  :root{
+    --accent: #e53935;      /* red accent */
+    --nav-bg: #6e6b6b;      /* nav gray */
+    --label-yellow: #ffeb3b;
+    --card-shadow: 0 18px 30px rgba(0,0,0,0.55);
+    --container-width: 1100px;
+    --rounded: 36px;
+  }
+
+  *{box-sizing: border-box;margin:0;padding:0;font-family: "Segoe UI", Roboto, Arial, sans-serif}
+
+  body{
+    background: #fff;
+    display:flex;
+    justify-content:center;
+    padding:18px;
+  }
+
+  .page{
+    width:100%;
+    max-width:var(--container-width);
+    min-width:320px;
+  }
+
+  /* Top small header title */
+  .top-title{
+    text-align:center;
+    margin-bottom:6px;
+  }
+  .top-title h1{
+    color:var(--accent);
+    font-size:46px;
+    letter-spacing:2px;
+    margin-bottom:0;
+  }
+  .top-title p{
+    text-align:center;
+    color:#333;
+    margin-top:4px;
+    font-weight:600;
+  }
+
+  /* Main rounded nav strip */
+  .nav-strip{
+    background:var(--nav-bg);
+    color:#fff;
+    border-radius:18px;
+    padding:10px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    border:3px solid #222;
+    margin-bottom: -20px; /* overlap hero */
+  }
+  .nav-inner{
+    width:95%;
+    max-width:1060px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 40px;
+  }
+  .nav-avatar{
+    position:absolute;
+    left: 50%;
+    top:-22px;
+    transform:translateX(-50%);
+    width:40px;height:48px;
+    border-radius:6px;
+    overflow:hidden;
+    border:2px solid #fff;
+    background:#f2c5b0 url('https://media.geeksforgeeks.org/wp-content/uploads/20240720181851/iui.png') center/cover no-repeat;
+  }
+  .nav-menu{
+    display:flex;
+    gap:26px;
+    align-items:center;
+    color:#fff;
+    font-size:14px;
+  }
+
+  /* Hero area */
+  .hero-wrap{
+    background: #fff;
+    border:3px solid #222;
+    border-top-left-radius:80px;
+    border-top-right-radius:80px;
+    border-bottom-left-radius:80px;
+    border-bottom-right-radius:80px;
+    overflow:hidden;
+    padding: 60px 30px;
+    position:relative;
+    margin-bottom:22px;
+  }
+
+  .hero{
+    width:100%;
+    height:320px;
+    position:relative;
+    background-image: url('https://media.geeksforgeeks.org/wp-content/uploads/20240720181851/iui.png');
+    background-position:center;
+    background-size:cover;
+    border-radius:20px;
+    box-shadow: inset 0 0 0 0 rgba(0,0,0,0.06);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  /* center heading on top of hero */
+  .hero-heading{
+    position:absolute;
+    top:28px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    font-weight:700;
+    font-size:24px;
+    color:#000;
+    background:rgba(255,255,255,0.65);
+    padding:6px 10px;
+    border-radius:6px;
+  }
+
+  .tag-order{
+    display:inline-block;
+    margin-left:10px;
+    background: #ffeb3b;
+    padding:4px 8px;
+    font-weight:700;
+    border-radius:3px;
+    font-size:12px;
+  }
+
+  /* pill cards */
+  .pill{
+    position:absolute;
+    width:300px;
+    height:120px;
+    border-radius:40px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,0.15);
+    box-shadow: var(--card-shadow);
+    border: 2px solid rgba(0,0,0,0.18);
+  }
+  .pill.left{
+    left:18%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(90deg,#ecbfb5,#e6c6c0);
+  }
+  .pill.right{
+    right:16%;
+    top:55%;
+    transform: translate(50%,-50%);
+    background: linear-gradient(90deg,#fff,#ffeaa7);
+  }
+
+  .pill img{
+    height:88px;
+    pointer-events:none;
+    user-select:none;
+  }
+
+  /* small yellow labels inside pills */
+  .pill .label{
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--label-yellow);
+    padding:4px 8px;
+    font-weight:800;
+    font-size:13px;
+    border-radius:4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  /* Featured products line */
+  .featured{
+    text-align:center;
+    font-size:28px;
+    margin-top:8px;
+    color:var(--accent);
+    font-weight:700;
+    letter-spacing:1px;
+  }
+
+  /* small responsive tweaks */
+  @media (max-width:900px){
+    .pill{width:220px;height:100px;border-radius:30px}
+    .hero{height:260px}
+    .nav-inner{gap:20px}
+    .top-title h1{font-size:40px}
+  }
+  @media (max-width:560px){
+    .nav-strip{padding:8px 10px}
+    .nav-menu{gap:14px;font-size:13px}
+    .pill{display:none}
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="top-title">
+      <h1>Online</h1>
+      <p>FoodShop</p>
+    </div>
+
+    <div class="nav-strip">
+      <div class="nav-avatar" aria-hidden="true"></div>
+      <div class="nav-inner">
+        <div style="width:60px"></div> <!-- spacer intentionally -->
+        <div class="nav-menu">
+          <div>Home</div>
+          <div>About</div>
+          <div>Menu</div>
+          <div>ContactUs</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-wrap">
+      <div class="hero">
+        <div class="hero-heading">
+          Welcome to Online FoodShop
+          <span class="tag-order">ORDER NOW</span>
+        </div>
+
+        <!-- left pill -->
+        <div class="pill left">
+          <!-- example character - replace with your own image -->
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240720181851/iui.png" alt="chef">
+          <div class="label">Prices</div>
+        </div>
+
+        <!-- right pill -->
+        <div class="pill right">
+          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240720181851/iui.png" alt="special">
+          <div class="label">Specials</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="featured">Featured Products</div>
+
+  </div>
+</body>
+</html>

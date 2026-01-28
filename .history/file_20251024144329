@@ -1,0 +1,2 @@
+echo "<!DOCTYPE html><html><head><title>My Page</title></head><body></body></html>" > html/index.html
+echo "body { font-family: Arial; }" > css/style.css

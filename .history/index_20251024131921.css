@@ -1,0 +1,6 @@
+.body{
+    justify-content:  center;
+    color:black;
+     display: flex; 
+     background-color: red;   
+}

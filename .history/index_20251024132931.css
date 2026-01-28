@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    background-color:yellow;  
+    margin:0;
+}
+.container{
+   padding:70px;
+   border:2px solid black;
+   background-color:#37353E;
+   border-radius: 3px;;
+
+}

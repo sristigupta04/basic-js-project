@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Whole page layout */
+.container {
+  display: flex;
+  flex-direction: column; /* So navbars are stacked vertically */
+  height: 100vh;
+}
+
+/* 🔹 Top Navbar */
+
+
+
+.navbar {
+  background-color: #002147;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+  color: white;
+}
+
+/* Logo */
+.navbar img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Address link */
+.navbar .address a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Navbar links */
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+}
+
+/* Search + Select box area */
+.navbar .tool {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#F7E7CE;
+  text-align: center;
+  width: 700px;
+  height: 40px;
+  border-radius: 6px;
+  padding: 0 5px;
+}
+
+/* Dropdown inside tool */
+.navbar .tool #option {
+  border-radius: 6px;
+  background-color: #E5E4E2;
+  width: 150px;
+  height: 36px;
+  padding: 0.23rem;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+/* Input box inside tool */
+.navbar .tool input {
+  border-radius: 6px;
+  width: 650px;
+  height: 36px;
+  padding: 0.23rem;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+/* Search icon link */
+.navbar .tool a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF8C00;
+  height: 36px;
+  width: 40px;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .tool input :hover{
+  background-color: gray;
+  border-color: coral;
+}
+
+/* 🔹 Second Navbar */
+.navbar-second {
+  background-color: #011936;
+  color: white;
+  padding: 10px;
+  text-align: center;
+    justify-content: space-around;
+
+}
+
+.navbar-second a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+}
+
+/* 🔸 Main layout (Sidebar + Content) */
+.main-area {
+  flex: 1;
+  display: flex;
+} 
+
+/* Sidebar on left */
+.Sidebar {
+  background-color: brown;
+  width: 300px;
+  padding: 30px;
+  color: white;
+}
+.btn_one {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  left: 16px;
+  line-height: 30px;
+}
+.trending{
+  border: 2px solid black;
+  width:auto;
+  text-align: center;
+  justify-content:space-around;
+  padding: 4px;
+}
+.trending a{
+  text-decoration: none;
+  color:azure;
+  font-size:20px;
+  font-weight: 300;
+}
+/* Close button */
+.sidebar_menu .btn_two i {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  left: 275px;
+  line-height: 60px;
+}
+
+
+/* Content on right */
+.Content {
+  flex: 1;
+  background-color: coral;
+  padding: 20px;
+}
+
+/* Footer at bottom */
+.Footer {
+  background-color: green;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

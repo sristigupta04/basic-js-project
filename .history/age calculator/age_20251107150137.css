@@ -1,0 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+   background: #7b22c3;
+background: radial-gradient(circle, rgba(123, 34, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}

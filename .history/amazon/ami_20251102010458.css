@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Whole page layout */
+.container {
+  display: flex;
+  flex-direction: column; /* So navbars are stacked vertically */
+  height: 100vh;
+}
+
+/* 🔹 Top Navbar */
+.navbar {
+  background-color: #002147;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+  color: white;
+}
+
+.navbar img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar .address a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  margin-left: 15px;
+}
+.navbar .tool{
+  display: flex;
+  background-color:cadetblue;
+ text-align: center;
+ justify-content: space-around;
+ width:600px;
+
+}
+
+
+.navbar .tool #option{
+border-radius:6px;
+background-color: gray;
+width:200px;
+height:30px;
+padding:0.23rem;;
+text-align: center;
+}
+
+.navbar input{
+  border-radius:6px;
+width:200px;
+height:30px;
+padding:0.23rem;;
+text-align: center;
+}
+.navbar .tool a{
+  height:50px;
+  background-color:coral;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 🔹 Second Navbar */
+.navbar-second {
+  background-color: #011936;
+  color: white;
+  padding: 10px;
+  text-align: center;
+    justify-content: space-around;
+
+}
+
+.navbar-second a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+}
+
+/* 🔸 Main layout (Sidebar + Content) */
+.main-area {
+  flex: 1;
+  display: flex;
+} 
+
+/* Sidebar on left */
+.Sidebar {
+  background-color: brown;
+  width: 250px;
+  padding: 20px;
+  color: white;
+}
+
+/* Content on right */
+.Content {
+  flex: 1;
+  background-color: coral;
+  padding: 20px;
+}
+
+/* Footer at bottom */
+.Footer {
+  background-color: green;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

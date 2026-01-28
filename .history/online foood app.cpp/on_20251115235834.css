@@ -1,0 +1,177 @@
+/* reset */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background:#fff;
+  color:#222;
+  padding:18px;
+}
+
+/* header */
+.site-header{ text-align:center; margin-bottom:10px; }
+.site-header h1{ color:darkred; font-weight:300; font-size:44px; }
+.site-header .brand{ display:block; color:darkred; font-weight:300; margin-top:4px; }
+
+/* nav */
+.navi{
+  border:3px solid black;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  padding:10px;
+  background:black;
+  border-radius:30px;
+  margin-bottom:20px;
+}
+.navi img{ width:50px; height:50px; object-fit:cover; border-radius:6px; }
+.work a{
+  text-decoration:none;
+  color:white;
+  margin:0 8px;
+  font-weight:600;
+}
+
+/* MAIN: left content + right side panel (image) */
+.main{
+  display:flex;
+  gap:28px;
+  align-items:stretch;
+  width:100%;
+  max-width:1100px;
+  margin: 0 auto;
+  border:2px solid black;
+  padding:18px;
+  height:500px; /* fixed height like you had; can be auto if you want */
+  background: #fff;
+  border-radius:10px;
+}
+
+/* LEFT column */
+.prot{
+  width:60%;               /* left takes 60% of main */
+  padding:10px 18px;
+  overflow:auto;
+}
+.prot h2{ font-size:28px; margin-bottom:10px; color:#b22222; }
+.prot p{ font-size:18px; line-height:1.5; margin-bottom:12px; }
+
+/* action buttons under paragraph */
+.actions{ display:flex; gap:12px; margin-bottom:16px; }
+.btn{
+  padding:8px 14px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn.primary{ background:coral; color:white; }
+.btn.secondary{ background:#eee; color:#333; }
+
+/* file cards row */
+.file{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:flex-start;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+
+/* card common */
+.one, .two{
+  height:180px;
+  width:300px;
+  border-radius:13px;
+  box-shadow:2px 2px 8px rgba(0,0,0,0.6);
+  position:relative;
+  overflow:hidden;
+}
+
+/* left small card - image background */
+.one{
+  background-image: url("https://t4.ftcdn.net/jpg/01/81/11/75/360_F_181117517_A5hGpIxILAyUfLBqRYqNNFBPJyo066F6.jpg");
+  background-size:cover;
+  background-position:center;
+}
+.one span{
+  position:absolute;
+  top:10px;
+  left:10px;
+  font-size:18px;
+  font-weight:700;
+  color:white;
+  background: rgba(0,0,0,0.45);
+  padding:4px 8px;
+  border-radius:6px;
+}
+
+/* right card: simple overlay + centered text */
+.two{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.15)),
+              url("https://t4.ftcdn.net/jpg/01/81/11/75/360_F_181117517_A5hGpIxILAyUfLBqRYqNNFBPJyo066F6.jpg");
+  background-size:cover;
+  color:#fff;
+  font-weight:700;
+  font-size:20px;
+}
+
+/* RIGHT column (side) - only part of main */
+.side{
+  width:40%;                  /* right takes 40% */
+  border-radius:10px;
+  overflow:hidden;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* side-inner has content and semi-transparent overlay so text readable */
+.side{
+  background-image: url("https://png.pngtree.com/png-clipart/20190313/ourmid/pngtree-planar-cartoon-street-view-shop-restaurant-and-vendor-elements-png-image_848867.jpg");
+  background-size:cover;
+  background-position:center;
+}
+
+.side-inner{
+  width:100%;
+  height:100%;
+  padding:20px;
+  backdrop-filter: none;
+  background: linear-gradient(to top right, rgba(0,0,0,0.35), rgba(0,0,0,0.12));
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+/* side content */
+.side-inner h3{ font-size:22px; margin-bottom:6px; }
+.side-inner p{ margin-bottom:12px; max-width:85%; }
+
+/* buttons inside side */
+.side-buttons{ display:flex; gap:10px; }
+.side-buttons .btn{ padding:8px 12px; border-radius:8px; background:#fff; color:#333; }
+
+/* hover effects */
+.one:hover, .two:hover, .side-buttons .btn:hover, .btn.primary:hover{
+  transform: translateY(-4px);
+  transition: all 0.18s ease;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width:900px){
+  .main{ flex-direction:column; height:auto; }
+  .prot, .side{ width:100%; }
+  .file .one, .file .two{ width:48%; height:140px; }
+}
+@media (max-width:560px){
+  .file .one, .file .two{ width:100%; }
+  .navi{ flex-direction:row; gap:12px; padding:8px; }
+}

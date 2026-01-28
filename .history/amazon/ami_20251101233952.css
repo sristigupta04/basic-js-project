@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.Container{
+    flex:1;
+}
+.navbar{
+    background-color: yellow;
+}
+.navbar-second{
+    background-color:red;
+}
+.Sidebar{
+    background-color:brown;
+}
+
+.Content{
+    background-color: coral;
+}
+
+.Footer{
+    background-color: green;
+}

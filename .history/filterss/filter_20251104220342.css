@@ -1,0 +1,26 @@
+.ele{
+    background-size: cover;
+  background-position: center;
+   justify-content: center;
+    align-items: center;
+    max-height: 600px;
+  position: relative;
+
+}
+.ele img{
+    height: 100vh;;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    object-fit: cover;
+}
+
+.ele h1{
+     padding: 1.5em;
+  background: hsl(0 100% 100% / 55%);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+}

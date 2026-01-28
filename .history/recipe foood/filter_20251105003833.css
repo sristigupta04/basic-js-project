@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.contain{
+    background-color: black;
+    height:100vh;
+    justify-content: center;
+}
+

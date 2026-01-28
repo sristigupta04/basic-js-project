@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    background-color: yellow;
+}
+.navbar-second{
+    background-color:red;
+}
+.Sidebar{
+    background-color:brown;
+}
+
+.Content{
+    background-color: coral;
+}
+
+.footer{
+    background-color: green;
+}

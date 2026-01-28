@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Background section */
+.main_box {
+  background: url("photo.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Sidebar button */
+.btn_one {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  left: 16px;
+  line-height: 30px;
+}
+
+/* Sidebar main */
+.sidebar_menu {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background: #111;
+  top: 0;
+  left: -250px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo section */
+.sidebar_menu .logo {
+  position: absolute;
+  width: 100%;
+  line-height: 60px;
+  box-shadow: 0 0 4px rgba(225, 225, 225, 0.5);
+}
+.sidebar_menu .logo a {
+  color: white;
+  font-weight: 500;
+  position: relative;
+  left: 50px;
+  text-decoration: none;
+}
+
+/* Close button */
+.sidebar_menu .btn_two i {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  left: 275px;
+  line-height: 60px;
+}
+
+/* Menu items */
+.sidebar_menu .menu {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+}
+.sidebar_menu .menu li {
+  list-style: none;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(225, 225, 225, 0.1);
+}
+.sidebar_menu .menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+.sidebar_menu .menu li i {
+  padding-right: 8px;
+}
+.sidebar_menu .menu li:hover {
+  background: #575757;
+  cursor: pointer;
+}
+.Sidebar .trending{
+  border: 2px solid black;
+  ;
+}
+/* Social media icons */
+.sidebar_menu .social_media {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sidebar_menu .social_media i {
+  padding: 5px 10px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Checkbox logic */
+#check {
+  display: none;
+}
+.btn_one i:hover {
+  cursor: pointer;
+  font-size: 30px;
+}
+#check:checked ~ .sidebar_menu {
+  left: 0;
+}
+#check:checked ~ .btn_one i {
+  opacity: 0;
+}
+#check:checked ~ .sidebar_menu .btn_two i {
+  opacity: 1;
+}

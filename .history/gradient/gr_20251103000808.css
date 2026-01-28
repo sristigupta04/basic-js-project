@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+
+}
+
+.intro{
+    width: 100%;
+    height:100vh;
+    background: #833AB4;
+background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 52%, rgba(252, 176, 69, 1) 100%);
+}
+.intro h1{
+    color:#833AB4;
+    justify-content: center;
+    justify-items: center;
+}
