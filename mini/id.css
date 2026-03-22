@@ -114,3 +114,67 @@
 #check:checked ~ .sidebar_menu .btn_two i {
   opacity: 1;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.main_box {
+  position: relative;
+}
+
+.main_box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.55));
+}
+
+.btn_one,
+.sidebar_menu {
+  z-index: 2;
+}
+
+.btn_one {
+  top: 20px;
+  left: 20px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.sidebar_menu {
+  background: rgba(17, 17, 17, 0.92);
+  backdrop-filter: blur(14px);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar_menu .logo {
+  box-shadow: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar_menu .menu li {
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.sidebar_menu .menu li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  padding-left: 26px;
+}
+
+.sidebar_menu .social_media {
+  padding: 16px 0 24px;
+}
+
+.sidebar_menu .social_media i {
+  opacity: 0.78;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.sidebar_menu .social_media i:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}

@@ -1,31 +1,44 @@
-let btn= document.querySelector("#button");
-let p = document.querySelector("#realage");
+const form = document.querySelector("#ageForm");
+const dateInput = document.querySelector("#eventDate");
+const result = document.querySelector("#realage");
 
-btn.addEventListener("click",()=>{
-    let input = document.querySelector("#eventDate").value;
-    if(!input){
-        p.textContent ="Please select the year";
-        return;
-    }
-    let birth = new Date(input);
-    let today =  new Date();
-    let  years= today.getFullYear() - birth.getFullYear();
-    let months = today.getMonth() - birth.getMonth();
-    let days = today.getDate()-birth.getDate();
+dateInput.max = new Date().toISOString().split("T")[0];
 
-     if (days < 0) {
-    const prevMonthDays = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
-    days = prevMonthDays + days; // since days is negative, this subtracts birth.day from prevMonthDays then add today's date
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const inputValue = dateInput.value;
+  if (!inputValue) {
+    result.textContent = "Please select your date of birth.";
+    return;
+  }
+
+  const birthDate = new Date(inputValue);
+  const today = new Date();
+
+  if (birthDate > today) {
+    result.textContent = "Please choose a valid past date.";
+    return;
+  }
+
+  let years = today.getFullYear() - birthDate.getFullYear();
+  let months = today.getMonth() - birthDate.getMonth();
+  let days = today.getDate() - birthDate.getDate();
+
+  if (days < 0) {
+    const previousMonthDays = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      0
+    ).getDate();
+    days += previousMonthDays;
     months -= 1;
   }
 
-  // if months negative, borrow from years
   if (months < 0) {
     months += 12;
     years -= 1;
   }
 
-  // final output
-  p.textContent = `Age: ${years} years, ${months} months, ${days} days`;
-
+  result.textContent = `You are ${years} years, ${months} months, and ${days} days old.`;
 });

@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Age Calculator</title>
     <link rel="stylesheet" href="age.css"/>
 </head>
 <body>
-    <div class="main">
-    <div class="age">
-    <h1>Age Calculate</h1>
-
-    <label for="eventDate">Enter  your age :</label>
-<input type="date" id="eventDate" name="eventDate">
-<button id="button">Calculate Age</button>
-<p id="realage">your age is </p></div></div>
-<script src="age.js"></script>
+    <main class="main">
+        <section class="age" aria-labelledby="age-title">
+            <h1 id="age-title">Age Calculator</h1>
+            <label for="eventDate">Enter your date of birth:</label>
+            <form id="ageForm" novalidate>
+                <input type="date" id="eventDate" name="eventDate">
+                <button id="button" type="submit">Calculate Age</button>
+            </form>
+            <p id="realage" aria-live="polite">Your age will appear here.</p>
+        </section>
+    </main>
+    <script src="age.js" defer></script>
 </body>
 </html>

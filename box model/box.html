@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Box Model Practice</title>
     <link rel="stylesheet" href="box.css"/>
 </head>
 <body>
@@ -13,9 +13,9 @@
       <h1>Extrinsic sizing vs intrinsic sizing</h1>
       <figure class="callout">
         <p>
-        &#169;  Notice that when the box is using <strong>extrinsic sizing</strong>, there’s
-          a limit of how much content you can add before it overflows out of the box’s
-          bounds. This makes the word, “awesome”, overflow.
+        &#169; Notice that when the box is using <strong>extrinsic sizing</strong>, there's
+          a limit to how much content you can add before it overflows out of the box's
+          bounds. This makes the word "awesome" overflow.
         </p>
       </figure>
       <label class="toggle" for="intrinsic-switch">
@@ -32,16 +32,14 @@
   <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</blockquote>
 </article>
 
-<!-- next div -->
-
 <div class="switch">
-    <label for="switcher" >change the flex-direction</label>
+    <label for="switcher">Change the flex direction</label>
     <select id="switcher">
-        <option  value="column">column</option>
-     <option  value="column-reverse">column-reverse</option>
-     <option  value="row">row</option>
-      <option  value="row-reverse">row-reverse</option>
-</select>
+        <option value="column">column</option>
+        <option value="column-reverse">column-reverse</option>
+        <option value="row">row</option>
+        <option value="row-reverse">row-reverse</option>
+    </select>
 
 </div>
 <div class="contain">
@@ -49,7 +47,7 @@
 <div class="box">me love</div>
 <div class="box">me me !!</div>
 </div>
-  <script src="box.js"></script>
+  <script src="box.js" defer></script>
 
 </body>
 </html>

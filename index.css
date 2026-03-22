@@ -96,3 +96,95 @@ footer{
     color:grey;
     padding: 2rem;;
 }
+
+body{
+    min-height: 100vh;
+    gap: 24px;
+    padding: 40px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: linear-gradient(180deg, #151519 0%, #1f2026 100%);
+}
+
+.container{
+    width: min(92vw, 420px);
+    min-height: 420px;
+    height: auto;
+    padding: 48px 36px;
+    border: 1px solid #2f3036;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+input{
+    border: 1px solid #cbd5e1;
+    background-color: #f8fafc;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus{
+    border-color: #1055C9;
+    box-shadow: 0 0 0 3px rgba(16, 85, 201, 0.18);
+}
+
+.btn{
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover{
+    background-color: #0d47a3;
+    transform: translateY(-1px);
+}
+
+.or{
+    padding: 8px 0;
+    letter-spacing: 0.08em;
+}
+
+.facebook,
+.foote a,
+.boat a{
+    transition: color 0.2s ease;
+}
+
+.facebook:hover,
+.foote a:hover,
+.boat a:hover{
+    color: white;
+}
+
+.boat{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 900px;
+}
+
+.bt1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+}
+
+@media (max-width: 600px){
+    .container{
+        padding: 36px 20px;
+    }
+
+    .foot{
+        margin-top: 3rem;
+    }
+
+    .bt1{
+        padding: 1rem;
+    }
+}

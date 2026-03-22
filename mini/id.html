@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Project</title>
+    <title>Sidebar Gallery</title>
 <link rel="stylesheet" href="id.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,18 +22,18 @@
     <div class="main_box">
       <input type="checkbox" id="check" />
       <div class="btn_one">
-        <label for="check" style="color: white">
+        <label for="check" style="color: white" aria-controls="sidebarMenu" aria-label="Open sidebar">
           <i class="fa-solid fa-bars"></i>
         </label>
       </div>
 
-      <div class="sidebar_menu">
+      <div class="sidebar_menu" id="sidebarMenu" aria-hidden="true">
         <div class="logo">
           <a href="#">Apna College</a>
         </div>
 
         <div class="btn_two">
-          <label for="check" style="color: grey">
+          <label for="check" style="color: grey" aria-label="Close sidebar">
             <i class="fa-solid fa-xmark"></i>
           </label>
         </div>
@@ -42,44 +42,45 @@
           <ul>
             <li>
               <i class="fa-solid fa-image"></i>
-              <a href="#">Gallery</a>
+              <a href="#" data-nav-link>Gallery</a>
             </li>
             <li>
               <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              <a href="#">Shortcuts</a>
+              <a href="#" data-nav-link>Shortcuts</a>
             </li>
             <li>
               <i class="fa-solid fa-photo-film"></i>
-              <a href="#">Exhibits</a>
+              <a href="#" data-nav-link>Exhibits</a>
             </li>
             <li>
               <i class="fa-solid fa-calendar-days"></i>
-              <a href="#">Events</a>
+              <a href="#" data-nav-link>Events</a>
             </li>
             <li>
               <i class="fa-solid fa-store"></i>
-              <a href="#">Store</a>
+              <a href="#" data-nav-link>Store</a>
             </li>
             <li>
               <i class="fa-solid fa-phone"></i>
-              <a href="#">Contact</a>
+              <a href="#" data-nav-link>Contact</a>
             </li>
             <li>
               <i class="fa-regular fa-comments"></i>
-              <a href="#">Feedback</a>
+              <a href="#" data-nav-link>Feedback</a>
             </li>
           </ul>
         </div>
 
         <div class="social_media">
           <ul>
-            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
           </ul>
         </div>
       </div>
     </div>
+    <script src="id.js" defer></script>
   </body>
 </html>

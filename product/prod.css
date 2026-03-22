@@ -64,7 +64,115 @@ img {
   border-radius: 10px;
 }
 
- body :hover{
-   box-shadow: 2px 2px 8px gray;
-   transform: scale(1.4fr);
+body :hover{
+   box-shadow: none;
+   transform: none;
+}
+
+body{
+  min-height: 100vh;
+  height: auto;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 32px 16px 48px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  color: #1f2937;
+}
+
+.main,
+.bio,
+.foot{
+  width: min(92vw, 340px);
+  border: none;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
+}
+
+.main{
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.bio{
+  width: min(92vw, 640px);
+  height: auto;
+  line-height: 1.7;
+  color: #475569;
+}
+
+img{
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.main h2{
+  margin-bottom: 6px;
+}
+
+.work{
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.project1,
+.project2,
+.project3{
+  height: 8px;
+  flex: 1;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0f172a, #94a3b8);
+}
+
+.foot{
+  font-weight: 600;
+}
+
+body > h1{
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+body > p{
+  margin: 4px 0 12px;
+  color: #475569;
+}
+
+body > input{
+  width: min(92vw, 340px);
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  outline: none;
+}
+
+body > button{
+  padding: 12px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #0f172a;
+  color: white;
+  cursor: pointer;
+}
+
+#list{
+  width: min(92vw, 340px);
+  list-style: none;
+}
+
+#list li{
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.main:hover,
+.bio:hover,
+.foot:hover{
+  box-shadow: 0 22px 36px rgba(15, 23, 42, 0.16);
+  transform: translateY(-2px);
 }

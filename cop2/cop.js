@@ -1,68 +1,70 @@
-let arr = ['', '', '', '', '', '', '', '', ''];
-let user = 'x';
+let board = ["", "", "", "", "", "", "", "", ""];
+let currentPlayer = "X";
+let gameActive = true;
 
-let winner = [
-  [0,1,2],
-  [3,4,5],
-  [6,7,8],
-  [0,3,6],
-  [1,4,7],
-  [2,5,8],
-  [0,4,8],
-  [2,4,6]
+const winners = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
 ];
 
-let btn = document.querySelector("button");
-let boxes = document.querySelectorAll(".box");
-let p = document.querySelector("p");
+const resetButton = document.querySelector(".reset");
+const boxes = document.querySelectorAll(".box");
+const statusText = document.querySelector("#ans");
 
-// har box par click event lagao
+function setStatus(message) {
+  statusText.textContent = message;
+}
+
+function checkWinner() {
+  for (const combo of winners) {
+    const [a, b, c] = combo;
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      setStatus(`Winner is: ${board[a]}`);
+      gameActive = false;
+      return true;
+    }
+  }
+
+  if (!board.includes("")) {
+    setStatus("It's a draw.");
+    gameActive = false;
+    return true;
+  }
+
+  return false;
+}
+
 boxes.forEach((box, index) => {
   box.addEventListener("click", () => {
-    // agar box khali hai tabhi likho
-    if (arr[index] === '') {
-      arr[index] = user;         // array update karo
-      box.innerText = user;      // screen pe dikhado
-      checkWinner();             // winner check karo
-
-      // turn change karo agar koi winner nahi
-      user = user === 'x' ? 'o' : 'x';
+    if (!gameActive || board[index]) {
+      return;
     }
+
+    board[index] = currentPlayer;
+    box.textContent = currentPlayer;
+
+    if (checkWinner()) {
+      return;
+    }
+
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    setStatus(`Current turn: ${currentPlayer}`);
   });
 });
 
-function checkWinner() {
-  let combo = ['a', 'b', 'c']; // sirf naam ke liye rakha gaya hai
+resetButton.addEventListener("click", () => {
+  board = ["", "", "", "", "", "", "", "", ""];
+  currentPlayer = "X";
+  gameActive = true;
+  setStatus("Current turn: X");
 
-  // har winning pattern check karo
-  for (let i = 0; i < winner.length; i++) {
-    let [a, b, c] = winner[i];
-
-    if (arr[a] && arr[a] === arr[b] && arr[a] === arr[c]) {
-      console.log(`you are winner: ${arr[a]}`);
-      p.innerText = `Winner is: ${arr[a]}`;
-      // saare boxes disable kar do
-      boxes.forEach(box => box.style.pointerEvents = "none");
-      return; // winner mil gaya
-    }
-  }
-
-  // draw check
-  if (!arr.includes('')) {
-    p.innerText = "It's a Draw!";
-    return;
-  }
-
-  console.log("No winner yet...");
-}
-
-// reset button
-btn.addEventListener("click", () => {
-  arr = ['', '', '', '', '', '', '', '', ''];
-  user = 'x';
-  p.innerText = '';
-  boxes.forEach(box => {
-    box.innerText = '';
-    box.style.pointerEvents = "auto";
+  boxes.forEach((box) => {
+    box.textContent = "";
   });
 });

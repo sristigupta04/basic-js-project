@@ -3,19 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Monotree</title>
+  <title>Monotree Profile</title>
   <link rel="stylesheet" href="prod.css" />
-  <!-- <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-pVn7QvRgtZptX8PnOl4Yp9Z+W8KplPoYbZj5P2m6xUpog7+oYvKkzKnpK+LZ2eL2DNwP/ZKn+qOL+8Bt3zE+Yg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  /> -->
 </head>
 <body>
   <div class="main">
-    <img src="https://cutiedp.com/wp-content/uploads/2025/08/no-dp-image-1.webp" alt="pic" />
+    <img src="https://cutiedp.com/wp-content/uploads/2025/08/no-dp-image-1.webp" alt="Profile portrait" />
     <h2>Sristi Gupta</h2>
     <p>Web Developer | Designer | Tech Enthusiast</p>
   </div>
@@ -24,8 +17,8 @@
     <p>
       A B.Tech CSE student who codes like a caffeine-fueled algorithm.
       Self-taught in Python, C++, JavaScript, and full-stack development,
-      I’ve built projects showcased on my GitHub. 
-      I’m eager to turn curiosity into real-world impact, write clean code, and occasionally debug life’s algorithms.
+      I've built projects showcased on my GitHub.
+      I'm eager to turn curiosity into real-world impact, write clean code, and occasionally debug life's algorithms.
     </p>
   </div>
 
@@ -35,13 +28,14 @@
     <div class="project3"></div>
   </div>
 
-  <div class="foot">Sristigupta@gmail.com</div>
+  <div class="foot">sristigupta@gmail.com</div>
 
-<h1>APNA COLLEGE</h1>
-<input placeholder="write" />
-<button>Submit</button>
-<ul id="list"></ul>  <!-- ✅ make sure you have this element -->
+  <h1>APNA COLLEGE</h1>
+  <p>Search universities by country name.</p>
+  <input id="countryInput" placeholder="Enter a country name" aria-label="Country name" />
+  <button id="searchButton" type="button">Search</button>
+  <ul id="list" aria-live="polite"></ul>
 
-<script src="prod.js"></script>
+  <script src="prod.js" defer></script>
 </body>
 </html>

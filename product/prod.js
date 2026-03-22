@@ -1,157 +1,73 @@
-let h1 = document.querySelector("h1");
+const heading = document.querySelector("h1");
+const countryInput = document.getElementById("countryInput");
+const searchButton = document.getElementById("searchButton");
+const list = document.getElementById("list");
+const headingColors = ["#ef4444", "#f59e0b", "#3b82f6", "#10b981"];
+let colorIndex = 0;
 
-function colo(color, delay) {
-  setTimeout(() => {
-    h1.style.color = color;
-  }, delay);
-}
+setInterval(() => {
+  heading.style.color = headingColors[colorIndex];
+  colorIndex = (colorIndex + 1) % headingColors.length;
+}, 1200);
 
-// calling them with increasing delays
-colo("red", 1000);
-colo("orange", 2000);
-colo("blue", 3000);
-colo("yellow", 4000);
-colo("green", 5000);
+async function getUniversities(country) {
+  const response = await fetch(
+    `https://universities.hipolabs.com/search?country=${encodeURIComponent(country)}`
+  );
 
-
-function savetodb(data){
-    return new Promise((success,failure) => {
-        let internet = Math.floor(Math.random()*10 )+1;
-        if(internet >4){
-            success("data is saved");
-
-        }else{
-            failure("not saved week connection");
-        }
-    });
-}
-// savetodb("apna college").then(() => {
-//   console.log("promis was resolved");
-//   console.log(request);
-// })
-// .catch(() => {
-//   console.log("promise is rejected");
-//   console.log(request);
-// })
-
-
-savetodb("apna college").then((result) => {
-  console.log("promis was resolved");
-  console.log("promise :",result)
-  return savetodb("heelo world");
-
-})
-.then((result) => {
-  console.log("data2 is saved");
-  console.log("result of 2 : ",result);
-})
-.catch((error) => {
-  console.log("promise is rejected", error);
-  console.log(error);
-})
-
-
-function num(){
-  return new Promise ((resolve, reject)=>{
-    setTimeout(() => {
-      let num =Math.floor(Math.random() *10)+1;
-      console.log(num);
-    },2000);
-  })
-}
-async function demo() {
-  await num();
-  await num();
-  num();
-}
-
-
-let url = "https://catfact.ninja/fact";
-
-fetch(url)
-  .then((res) => {
-    console.log("Response object:", res);
-    return res.json(); // convert to JSON
-  })
-  .then((data) => {
-    console.log("First cat fact data:", data);
-    // now fetch again
-    return fetch(url);
-  })
-  .then((res2) => {
-    console.log("Second response object:", res2);
-    return res2.json(); // convert second response to JSON
-  })
-  .then((data2) => {
-    console.log("Second cat fact data:", data2);
-  })
-  .catch((err) => {
-    console.log("Error:", err);
-  });
-
-let facts = "https://catfact.ninja/fact";
-
-async function fact() {
-  try {
-    // 1️⃣ Fetch the first cat fact
-    let res = await fetch(facts);
-    let data = await res.json();
-    console.log("First fact:", data.fact);
-
-    // 2️⃣ Fetch another cat fact
-    let res1 = await fetch(facts);
-    let data1 = await res1.json();
-    console.log("Second fact:", data1.fact);
-
-  } catch (e) {
-    console.log("Error:", e);
+  if (!response.ok) {
+    throw new Error("Unable to fetch universities.");
   }
+
+  return response.json();
 }
 
-fact(); // 👈 Don’t forget to call the function
+function renderMessage(message) {
+  list.innerHTML = "";
+  const item = document.createElement("li");
+  item.textContent = message;
+  list.appendChild(item);
+}
 
-const url1 = "https://icanhazdadjoke.com/";
-async function getjoke(){
-  try{
-    let config = {headers:{Accept : "application/json"}}
-    let res = await  axiox.get(url.config);
-    console.log(res.data);
+function show(universities, country) {
+  list.innerHTML = "";
 
-  }catch(err){
-    console.log(err);
+  if (!universities.length) {
+    renderMessage(`No universities found for "${country}".`);
+    return;
   }
-}
 
-
-let url2 = "https://universities.hipolabs.com/search?name=";
-
-let btn = document.querySelector("button");
-
-btn.addEventListener("click", async () => {
-  let country = document.querySelector("input").value;
-  console.log(country);
-  let universities = await get(country);
-  show(universities); // ✅ call show() with data
-});
-
-function show(universities) {
-  let list = document.querySelector("#list");
-  list.innerText = ""; // clear previous results
-  for (let uni of universities) {
-    console.log(uni.name);
-    let li = document.createElement("li");
-    li.innerText = uni.name;
+  universities.slice(0, 10).forEach((university) => {
+    const li = document.createElement("li");
+    li.textContent = university.name;
     list.appendChild(li);
+  });
+}
+
+async function searchUniversities() {
+  const country = countryInput.value.trim();
+
+  if (!country) {
+    renderMessage("Please enter a country name first.");
+    return;
+  }
+
+  renderMessage("Searching...");
+
+  try {
+    const universities = await getUniversities(country);
+    show(universities, country);
+  } catch (error) {
+    renderMessage("Something went wrong while loading universities.");
+    console.error(error);
   }
 }
 
-async function get(country) {
-  try {
-    let res = await axios.get(url2 + country);
-    console.log(res.data);
-    return res.data; // ✅ return data so we can show it
-  } catch (e) {
-    console.log("error", e);
-    return [];
+searchButton.addEventListener("click", searchUniversities);
+
+countryInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    searchUniversities();
   }
-}
+});
