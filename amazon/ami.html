@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amazon Page</title>
+  <title>Amazon Inspired Store</title>
   <link rel="stylesheet" href="ami.css" />
   <link
     rel="stylesheet"
@@ -18,12 +18,11 @@
 <body>
   <div class="container">
 
-    <!-- Navbar -->
     <div class="navbar">
-      <img class="fit-picture" src="pic.jpg" alt="author" />
+      <img class="fit-picture" src="pic.jpg" alt="Store logo" />
 
       <div class="address">
-        <a href="#">Delivering to Patna 800001 update location</a>
+        <a href="#">Delivering to Patna 800001. Update location</a>
       </div>
 
       <a href="#" class="house"><i class="fa-solid fa-house"></i></a>
@@ -39,7 +38,7 @@
           <option value="goldfish">Prime account</option>
         </select>
 
-        <input type="text" placeholder="Search Amazon.in" />
+        <input id="searchAmazon" type="text" placeholder="Search Amazon.in" aria-label="Search products" />
         <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
       </div>
 
@@ -58,7 +57,6 @@
       </svg>
     </div>
 
-    <!-- Second Navbar -->
     <div class="navbar-second">
       <a href="#">All</a>
       <a href="#">Fresh</a>
@@ -76,10 +74,7 @@
       <a href="#">Amazon Pay</a>
     </div>
 
-    <!-- Main Area -->
     <div class="main-area">
-      
-      <!-- Sidebar -->
       <div class="Sidebar">
         <input type="checkbox" id="check" />
         <div class="btn_one">
@@ -132,48 +127,48 @@
         </div>
       </div>
 
-      <!-- Content -->
       <div class="Content">
         <div class="area">
-              <div class="img-section">
-              <div class="name">section</div>
-              <div class="images">
-                <img src="bedsheet.jpeg" alt="bedsheet">
-                <img src="clothes.jpg" alt="clothest">
-                <img src="shoes.webp" alt="shoes">
-              </div></div>
-              <div class="img-section">
-                 <div class="name">section</div>
-                 <div class="images">
-                <img src="wollen.webp" alt="wollen">
-                <img src="sound box.avif" alt="sound">
-                <img src="utensil.jpg" alt="utensil">
-              </div></div>
-              <div class="img-section">
-        <div class="name">section</div>
-        <div class="images">
-                <img src="bedsheet.jpeg" alt="bedsheet">
-                <img src="clothes.jpg" alt="clothest">
-                <img src="shoes.webp" alt="shoes">
-              </div></div>
-              <div class="img-section">
-               <div class="name">section</div>
-               <div class="images">
-                <img src="wollen.webp" alt="wollen">
-                <img src="sound box.avif" alt="sound">
-                <img src="utensil.jpg" alt="utensil">
-              </div></div>
-</div>
-
-<!-- do div h mere  -->
+          <div class="img-section">
+            <div class="name">Home Essentials</div>
+            <div class="images">
+              <img src="bedsheet.jpeg" alt="bedsheet">
+              <img src="clothes.jpg" alt="clothest">
+              <img src="shoes.webp" alt="shoes">
+            </div>
+          </div>
+          <div class="img-section">
+            <div class="name">Daily Picks</div>
+            <div class="images">
+              <img src="wollen.webp" alt="wollen">
+              <img src="sound box.avif" alt="sound">
+              <img src="utensil.jpg" alt="utensil">
+            </div>
+          </div>
+          <div class="img-section">
+            <div class="name">Fashion Deals</div>
+            <div class="images">
+              <img src="bedsheet.jpeg" alt="bedsheet">
+              <img src="clothes.jpg" alt="clothest">
+              <img src="shoes.webp" alt="shoes">
+            </div>
+          </div>
+          <div class="img-section">
+            <div class="name">Popular Tech</div>
+            <div class="images">
+              <img src="wollen.webp" alt="wollen">
+              <img src="sound box.avif" alt="sound">
+              <img src="utensil.jpg" alt="utensil">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Footer -->
-    <div class="Footer">Footer</div>
+    <div class="Footer">Browse deals, trends, and everyday essentials in one place. <span id="footerYear"></span></div>
 
   </div>
 
-  <script src="ami.js"></script>
+  <script src="ami.js" defer></script>
 </body>
 </html>
